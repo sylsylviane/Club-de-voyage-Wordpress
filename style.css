@@ -168,7 +168,8 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -177,7 +178,8 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -185,9 +187,9 @@ select { /* 1 */
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -195,9 +197,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -206,9 +208,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -252,8 +254,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -261,8 +263,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -270,7 +272,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -278,7 +280,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -327,28 +329,51 @@ template {
 Layout
 *******************/
 .global {
-  width: 1100px;
+  max-width: 1100px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+}
+.global .global__entete {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.global h1 {
+  margin-top: 0;
+}
+
+.recherche > div {
+  display: flex;
+  gap: 3px;
+}
+
+.recherche input {
+  max-width: 300px;
+  min-width: 150px;
+  max-height: 22px;
 }
 
 .entete {
-  background-color: aqua;
+  background-color: #88c1f2;
+  padding: 2rem;
 }
 
 .principal {
-  background-color: rgb(211, 230, 42);
+  background-color: #93a605;
 }
 
 .pied {
-  background-color: rgb(53, 15, 5);
+  background-color: #d93425;
+  text-align: center;
 }
 
 /********************
 Base
 *******************/
 h1 {
-  font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
+  font-size: clamp(1rem, -0.75rem + 4.8vw, 3.75rem);
 }
 
 h2 {
@@ -371,12 +396,14 @@ h6 {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
 }
 
-P {
+p,
+a {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
 }
 
 h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 1.5px;
 }
 
 h2 {
@@ -391,7 +418,9 @@ h6 {
 }
 
 p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  max-width: 45ch;
 }
 
 /********************
@@ -406,7 +435,42 @@ Composant
 }
 
 .principal__article {
-  border: 1px solid #aaa;
+  border: 1px solid #3e6d72;
+  border-radius: 5px;
   flex: 1 1 340px;
   padding: 10px;
-}/*# sourceMappingURL=style.css.map */
+}
+.principal__article h4,
+.principal__article h5 {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.principal__article h6 {
+  margin-top: 8px;
+}
+
+.menu-principal-container .menu {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+}
+@media screen and (max-width: 815px) {
+  .menu-principal-container .menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.menu-principal-container .menu .menu-item {
+  list-style-type: none;
+  max-width: fit-content;
+}
+.menu-principal-container .menu .menu-item a {
+  text-decoration: none;
+  color: inherit;
+  padding: 1em;
+}
+.menu-principal-container .menu .menu-item a:hover {
+  background-color: #d93425;
+  transition-duration: 350ms;
+  border-radius: 5px;
+} /*# sourceMappingURL=style.css.map */

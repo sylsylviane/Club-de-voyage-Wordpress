@@ -1,13 +1,24 @@
-.principal__conteneur{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+.principal__conteneur {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.principal__article{
-    border: 1px solid #aaa;
-    flex: 1 1 340px;
-    padding: 10px;
+.principal__article {
+  border: 1px solid #3e6d72;
+  border-radius: 5px;
+  flex: 1 1 340px;
+  padding: 10px;
+
+  & h4,
+  & h5 {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  & h6 {
+    margin-top: 8px;
+  }
 }
