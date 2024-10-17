@@ -337,11 +337,11 @@ Layout
 }
 
 .principal {
-  background-color: rgb(123, 165, 165);
+  background-color: rgb(211, 230, 42);
 }
 
 .pied {
-  background-color: rgb(0, 88, 88);
+  background-color: rgb(53, 15, 5);
 }
 
 /********************
@@ -397,12 +397,16 @@ p {
 /********************
 Composant
 *******************/
-.principal .global {
+.principal__conteneur {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .principal__article {
   border: 1px solid #aaa;
+  flex: 1 1 340px;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */
