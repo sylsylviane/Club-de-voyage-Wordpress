@@ -1,0 +1,37 @@
+.global {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+
+  .global__entete {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  & h1 {
+    margin-top: 0;
+  }
+}
+.recherche > div {
+  display: flex;
+  gap: 3px;
+}
+.recherche input {
+  max-width: 300px;
+  min-width: 150px;
+  max-height: 22px;
+}
+.entete {
+  background-color: #88c1f2;
+  padding: 2rem;
+}
+.principal {
+  background-color: #93a605;
+}
+.pied {
+  background-color: #d93425;
+  text-align: center;
+}
