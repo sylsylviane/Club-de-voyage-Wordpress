@@ -1,5 +1,5 @@
 h1 {
-  font-size: clamp(1rem, -0.75rem + 4.8vw, 3.75rem);
+  font-size: clamp(2rem, -0.75rem + 4.8vw, 4rem);
 }
 h2 {
   font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
@@ -17,14 +17,12 @@ h6 {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
 }
 
-p,
-a {
+P {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
 }
 
 h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  letter-spacing: 1.5px;
 }
 
 h2 {
@@ -41,5 +39,4 @@ h6 {
 p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  max-width: 45ch;
 }

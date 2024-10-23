@@ -1,41 +1,38 @@
-// <nav class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-54"><a href="http://localhost/31w/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/" aria-current="page">Communication et dynamique d’une équipe de travail</a></li>
-// <li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-55"><a href="http://localhost/31w/582-4mb-animation-3d-75h/">Animation 3D</a></li>
-// <li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-56"><a href="http://localhost/31w/582-4w4-conception-dinterfaces-et-developpement-web/">Conception d’interfaces et développement Web</a></li>
-// <li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-57"><a href="http://localhost/31w/582-3j3-creation-de-jeu-3d-75h/">Création de jeu 3D</a></li>
-// <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-58"><a href="http://localhost/31w/582-3w3-creation-de-sites-web-dynamiques-90h/">Création de sites Web dynamiques</a></li>
-// </ul></nav>
-
+/*
+<nav class="menu-principal-container">
+<ul id="menu-principal" class="menu"><li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-56"><a href="http://localhost:81/31w-etudiant/582-4mb-animation-3d-75h/">Animation 3D</a></li>
+<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-57"><a href="http://localhost:81/31w-etudiant/582-4pa-interfaces-web-reactives-et-animees-cours-au-choix-75h/">Interfaces Web réactives et animées</a></li>
+<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-58"><a href="http://localhost:81/31w-etudiant/360-4j4-creation-de-jeu-en-equipe-105h/">Création de jeu en équipe</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-59"><a href="http://localhost:81/31w-etudiant/582-4w4-conception-dinterfaces-et-developpement-web/">Conception d’interfaces</a></li>
+<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-60"><a href="http://localhost:81/31w-etudiant/582-4c2-gestion-de-projets-multimedias/" aria-current="page">Gestion de projets multimédias</a></li>
+</ul></nav>
+*/
 .menu-principal-container {
-  //nav
-  // display: flex;
-  // flex-wrap: wrap;
-
+  // nav
   .menu {
-    //ul
+    // ul
     display: flex;
-    justify-content: space-between;
-    padding-left: 0;
-
-    @media screen and (max-width: 815px) {
-      display: flex;
-      flex-direction: column;
-    }
-
+    list-style-type: none;
+    gap: 5px;
     .menu-item {
       //li
-      list-style-type: none;
-      max-width: fit-content;
 
-      & a {
-        text-decoration: none;
-        color: inherit;
-        padding: 1em;
+      a {
+        //a
+        display: block;
+        padding: 3px;
+        background-color: rgba(0, 0, 0, 0.2);
         &:hover {
-          background-color: #d93425;
-          transition-duration: 350ms;
-          border-radius: 5px;
+          background-color: rgba(0, 0, 0, 0.1);
         }
       }
     }
   }
 }
+
+/*
+.menu-principal-container 
+.menu-principal-container .menu
+.menu-principal-container .menu .menu-item
+.menu-principal-container .menu .menu-item a
+*/

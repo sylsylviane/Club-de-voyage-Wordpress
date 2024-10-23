@@ -187,9 +187,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -197,9 +197,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -208,9 +208,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -254,8 +254,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -263,8 +263,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -272,7 +272,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -280,7 +280,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -331,33 +331,11 @@ Layout
 .global {
   max-width: 1100px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-}
-.global .global__entete {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-.global h1 {
-  margin-top: 0;
-}
-
-.recherche > div {
-  display: flex;
-  gap: 3px;
-}
-
-.recherche input {
-  max-width: 300px;
-  min-width: 150px;
-  max-height: 22px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .entete {
   background-color: #88c1f2;
-  padding: 2rem;
 }
 
 .principal {
@@ -366,14 +344,13 @@ Layout
 
 .pied {
   background-color: #d93425;
-  text-align: center;
 }
 
 /********************
 Base
 *******************/
 h1 {
-  font-size: clamp(1rem, -0.75rem + 4.8vw, 3.75rem);
+  font-size: clamp(2rem, -0.75rem + 4.8vw, 4rem);
 }
 
 h2 {
@@ -396,14 +373,12 @@ h6 {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
 }
 
-p,
-a {
+P {
   font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
 }
 
 h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  letter-spacing: 1.5px;
 }
 
 h2 {
@@ -418,9 +393,7 @@ h6 {
 }
 
 p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  max-width: 45ch;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 /********************
@@ -440,8 +413,7 @@ Composant
   flex: 1 1 340px;
   padding: 10px;
 }
-.principal__article h4,
-.principal__article h5 {
+.principal__article h4, .principal__article h5 {
   margin-top: 8px;
   margin-bottom: 0;
 }
@@ -449,28 +421,81 @@ Composant
   margin-top: 8px;
 }
 
+/*
+<nav class="menu-principal-container">
+<ul id="menu-principal" class="menu"><li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-56"><a href="http://localhost:81/31w-etudiant/582-4mb-animation-3d-75h/">Animation 3D</a></li>
+<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-57"><a href="http://localhost:81/31w-etudiant/582-4pa-interfaces-web-reactives-et-animees-cours-au-choix-75h/">Interfaces Web réactives et animées</a></li>
+<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-58"><a href="http://localhost:81/31w-etudiant/360-4j4-creation-de-jeu-en-equipe-105h/">Création de jeu en équipe</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-59"><a href="http://localhost:81/31w-etudiant/582-4w4-conception-dinterfaces-et-developpement-web/">Conception d’interfaces</a></li>
+<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-60"><a href="http://localhost:81/31w-etudiant/582-4c2-gestion-de-projets-multimedias/" aria-current="page">Gestion de projets multimédias</a></li>
+</ul></nav>
+*/
 .menu-principal-container .menu {
   display: flex;
-  justify-content: space-between;
-  padding-left: 0;
-}
-@media screen and (max-width: 815px) {
-  .menu-principal-container .menu {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.menu-principal-container .menu .menu-item {
   list-style-type: none;
-  max-width: fit-content;
+  gap: 5px;
 }
 .menu-principal-container .menu .menu-item a {
-  text-decoration: none;
-  color: inherit;
-  padding: 1em;
+  display: block;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .menu-principal-container .menu .menu-item a:hover {
-  background-color: #d93425;
-  transition-duration: 350ms;
-  border-radius: 5px;
-} /*# sourceMappingURL=style.css.map */
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*
+.menu-principal-container 
+.menu-principal-container .menu
+.menu-principal-container .menu .menu-item
+.menu-principal-container .menu .menu-item a
+*/
+.entete__global {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.entete__titre h1,
+.entete__titre h2 {
+  margin: 0;
+}
+
+.entete__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/*
+<form class="recherche" role="search" method="get" action="http://localhost:81/31w-etudiant/">
+  <label>
+    <input class="recherche__input" type="search" placeholder="Search..." value="" name="s">
+  </label>
+  <button class="recherche__bouton" type="submit">
+    <img src="https://s2.svgbox.net/hero-outline.svg?ic=search&amp;color=000" width="32" height="32">
+  </button>
+</form>
+
+
+*/
+.recherche {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.recherche__input, .recherche__bouton {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+}
+.recherche__input:hover, .recherche__bouton:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.recherche__input:focus, .recherche__bouton:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.recherche__input::placeholder {
+  color: rgb(75, 125, 0);
+  font-size: 1.5rem;
+}/*# sourceMappingURL=style.css.map */
