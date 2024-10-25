@@ -1,7 +1,7 @@
 :root {
-  --couleur1: #60A9D6;
+  --couleur1: #A1A4AD;
   --couleur2: #d59537;
-  --couleur3: #98C3E4;
+  --couleur3: #6E7283;
   --couleur4: #c73682;
   --couleur5: #FCFAFA;
 }
@@ -20,6 +20,12 @@ a{
     display: block;
     padding: 3px;
     text-transform: uppercase;
+}
+section > header{
+  margin-top: 40px;
+}
+section > header>*{
+  margin-bottom: 20px;
 }
 
 .global {
