@@ -11,6 +11,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-31w 
 */
+/* pas besoin du _ et de l'extension*/
 /********************
 Normalize
 *******************/
@@ -328,22 +329,55 @@ template {
 /********************
 Layout
 *******************/
-.global {
-  max-width: 1100px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.3);
+:root {
+  --couleur1: #60A9D6;
+  --couleur2: #d59537;
+  --couleur3: #98C3E4;
+  --couleur4: #c73682;
+  --couleur5: #FCFAFA;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 3px;
+  text-transform: uppercase;
+}
+
+.global {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: rgba(242, 241, 240, 0.0862745098);
+  padding: 20px;
+}
+
+/*
 .entete {
-  background-color: #88c1f2;
+  background-color: #00dfdf;
+
+}
+*/
+.entete {
+  background-color: var(--couleur1);
 }
 
 .principal {
-  background-color: #93a605;
+  background-color: var(--couleur3);
 }
 
 .pied {
-  background-color: #d93425;
+  background-color: var(--couleur1);
 }
 
 /********************
@@ -354,27 +388,29 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
+  font-size: clamp(1.3rem, -0.3125rem + 3vw, 1.5rem);
 }
 
 h3 {
-  font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2.1875rem);
+  font-size: clamp(1.2rem, -0.25rem + 2.6vw, 2.1875rem);
 }
 
 h4 {
-  font-size: clamp(0.5rem, -0.1875rem + 2.2vw, 1.875rem);
+  font-size: clamp(1.1rem, -0.1875rem + 2.2vw, 1.875rem);
 }
 
 h5 {
-  font-size: clamp(0.5rem, -0.0313rem + 1.7vw, 1.5625rem);
+  font-size: clamp(1rem, -0.0313rem + 1.7vw, 1.5625rem);
+  margin: 0;
 }
 
 h6 {
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
+  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.25rem);
+  margin: 0;
 }
 
 P {
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
+  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
 }
 
 h1 {
@@ -383,6 +419,7 @@ h1 {
 
 h2 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0;
 }
 
 h3,
@@ -402,23 +439,20 @@ Composant
 .principal__conteneur {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 .principal__article {
-  border: 1px solid #3e6d72;
-  border-radius: 5px;
-  flex: 1 1 340px;
+  border: 1px solid #aaa;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 340px;
   padding: 10px;
 }
-.principal__article h4, .principal__article h5 {
-  margin-top: 8px;
-  margin-bottom: 0;
-}
-.principal__article h6 {
-  margin-top: 8px;
+.principal__article header {
+  margin-top: 15px;
 }
 
 /*
@@ -432,16 +466,27 @@ Composant
 */
 .menu-principal-container .menu {
   display: flex;
-  list-style-type: none;
   gap: 5px;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+.menu-principal-container .menu .menu-item {
+  min-width: fit-content;
+  text-decoration: none;
 }
 .menu-principal-container .menu .menu-item a {
-  display: block;
-  padding: 3px;
-  background-color: rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  font-size: 1rem;
 }
 .menu-principal-container .menu .menu-item a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  text-decoration: underline;
+  transition: 1000ms;
+}
+@media screen and (max-width: 720px) {
+  .menu-principal-container .menu .menu-item a {
+    font-size: 0.9rem;
+  }
 }
 
 /*
@@ -454,6 +499,7 @@ Composant
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .entete__titre h1,
@@ -461,10 +507,20 @@ Composant
   margin: 0;
 }
 
+.entete__titre h2 {
+  padding-top: 10px;
+}
+
 .entete__nav {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  gap: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .entete__nav {
+    align-items: flex-start;
+  }
 }
 
 /*
@@ -479,14 +535,30 @@ Composant
 
 
 */
+/*
+.recherche {
+}
+
+.recherche__input {
+}
+
+.recherche__bouton {
+}
+
+.recherche__bouton img {
+}
+*/
 .recherche {
   border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  position: relative;
 }
 .recherche__input, .recherche__bouton {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
   border: none;
   outline: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  padding: 5px;
 }
 .recherche__input:hover, .recherche__bouton:hover {
   background-color: rgba(0, 0, 0, 0.2);
@@ -495,7 +567,12 @@ Composant
   background-color: rgba(0, 0, 0, 0.1);
   outline: none;
 }
+.recherche__bouton {
+  position: absolute;
+  right: 0;
+}
 .recherche__input::placeholder {
-  color: rgb(75, 125, 0);
-  font-size: 1.5rem;
+  color: #BDD1D9;
+  font-size: 1.1rem;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

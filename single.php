@@ -1,20 +1,21 @@
 <?php
 
 /**
- * index.php - Le modèle par défaut de wordpress
+ * single.php - Pour afficher un seul article ou résultat
  */
 ?>
 <?php get_header() ?>
 
 <main class="principal">
   <section class="global">
-    <h2>Liste de cours - index.php</h2>
+    <h2>Résultat - single.php</h2>
     <div class="principal__conteneur">
       <?php if (have_posts()): ?>
+        <!-- on aurait pas besoin d'utiliser une boucle while car un seul article sera toujours affiché -->
         <?php while (have_posts()) :  the_post(); ?>
           <article class="principal__article">
-            <h5><?php the_title() ?></h5>
-            <p><?php the_content() ?></p>
+            <h2><?php the_title() ?></h2>
+            <?php the_content() ?>
           </article>
         <?php endwhile; ?>
     </div>

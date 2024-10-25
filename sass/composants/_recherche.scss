@@ -11,27 +11,32 @@
 
 */
 
-// .recherche {
-// }
+/*
+.recherche {
+}
 
-// .recherche__input {
-// }
+.recherche__input {
+}
 
-// .recherche__bouton {
-// }
+.recherche__bouton {
+}
 
-// .recherche__bouton img {
-// }
+.recherche__bouton img {
+}
+*/
 
 .recherche {
   border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  position: relative;
   
   &__input,
   &__bouton {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     border: none;
     outline: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    padding: 5px;
     &:hover {
       background-color: rgba(0, 0, 0, 0.2);
     }
@@ -40,9 +45,15 @@
       outline: none;
     }
   }
+  &__bouton{
+    position: absolute;
+    right: 0;
+  }
+
   &__input::placeholder {
-    color: rgb(75, 125, 0);
-    font-size: 1.5rem;
+    color: #BDD1D9;
+    font-size: 1.1rem;
+    font-weight: bold;
   }
   img {
   }

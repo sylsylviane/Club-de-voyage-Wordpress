@@ -12,19 +12,27 @@
   .menu {
     // ul
     display: flex;
-    list-style-type: none;
     gap: 5px;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
     .menu-item {
       //li
-
+      min-width: fit-content;
+      text-decoration: none;
       a {
-        //a
-        display: block;
-        padding: 3px;
-        background-color: rgba(0, 0, 0, 0.2);
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.1);
+        padding: 5px;
+        font-size: 1rem;
+        &:hover{
+          text-decoration: underline;
+          transition: 1000ms;
         }
+        @media screen and (max-width: 720px) {
+            &{
+              font-size: 0.9rem;
+            }
+        }
+        
       }
     }
   }
