@@ -9,28 +9,28 @@
 
 .principal__article {
   background-color: #f0e8e6;
-  // border: 1px solid #aaa;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 340px;
   padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgb(192, 163, 152) 0px 3px 8px;
   border-radius: 5px;
 
     & header{
       margin-top: 15px;
-      
+      margin-bottom: 10px;
     }
     a{
       font-size: clamp(1rem, 0.125rem + 1.2vw, 1.25rem);
       padding-top: 10px;
       text-transform: none;
     }
-}
 
-// .principal__recherche{
-//   margin-top: 40px;
-// }
+    &:hover{
+  box-shadow: rgb(193, 132, 109) 0px 5px 10px;
+
+    }
+}
 .principal__recherche > .principal__article {
 flex-basis: auto;
 margin-bottom: 20px;

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * index.php - Le modèle par défaut de wordpress
+ * search.php - Le modèle de wordpress
  */
 ?>
 <?php get_header() ?>

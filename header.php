@@ -1,7 +1,7 @@
 <?php
 
 /**
- * index.php - Le modèle par défaut de wordpress
+ * header.php - Le modèle pour l'entête de wordpress
  */
 ?>
 

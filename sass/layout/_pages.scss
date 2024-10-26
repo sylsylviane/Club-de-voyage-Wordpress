@@ -1,19 +1,7 @@
 :root {
-  // --couleur1: #A1A4AD;
-  // --couleur2: #d59537;
-  // --couleur3: #6E7283;
-  // --couleur4: #c73682;
-  // --couleur5: #FCFAFA;
-
-  --couleur3: #e0d1cc;
   --couleur1: #f0e8e6;
-  --couleur5: #c0a398;
-
-  //   --couleur3: #bec9d4;
-  // --couleur1: #dee4e9;
-  // --couleur5: #9eafbf;
-
-
+  --couleur2: #e0d1cc;
+  --couleur3: #c0a398;
 }
 
 html,
@@ -28,8 +16,9 @@ a{
     text-decoration: none;
     color: inherit;
     display: block;
-    padding: 3px;
+
     text-transform: uppercase;
+    cursor: pointer;
 }
 section > header{
   margin-top: 40px;
@@ -37,23 +26,15 @@ section > header{
 section > header>*{
   margin-bottom: 20px;
 }
-p{
-  max-width: 40ch;
-}
+
 
 .global {
   max-width: 1280px;
   margin: 0 auto;
-  background-color: #f2f1f016;
+  background-color: #c0a39832;
   padding: 20px
 }
 
 @include regle_couleur_back(".entete", $couleur1);
-
-.principal {
-  background-color: var(--couleur3);
-}
-
-.pied {
-  background-color: var(--couleur5);
-}
+@include regle_couleur_back(".principal", $couleur2);
+@include regle_couleur_back(".pied", $couleur1);

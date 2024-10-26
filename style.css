@@ -331,9 +331,9 @@ template {
 Layout
 *******************/
 :root {
-  --couleur3: #e0d1cc;
   --couleur1: #f0e8e6;
-  --couleur5: #c0a398;
+  --couleur2: #e0d1cc;
+  --couleur3: #c0a398;
 }
 
 html,
@@ -350,8 +350,8 @@ a {
   text-decoration: none;
   color: inherit;
   display: block;
-  padding: 3px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 section > header {
@@ -362,14 +362,10 @@ section > header > * {
   margin-bottom: 20px;
 }
 
-p {
-  max-width: 40ch;
-}
-
 .global {
   max-width: 1280px;
   margin: 0 auto;
-  background-color: rgba(242, 241, 240, 0.0862745098);
+  background-color: rgba(192, 163, 152, 0.1960784314);
   padding: 20px;
 }
 
@@ -378,11 +374,11 @@ p {
 }
 
 .principal {
-  background-color: var(--couleur3);
+  background-color: var(--couleur2);
 }
 
 .pied {
-  background-color: var(--couleur5);
+  background-color: var(--couleur1);
 }
 
 /********************
@@ -397,7 +393,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.2rem, -0.25rem + 2.6vw, 2.1875rem);
+  font-size: clamp(1.2rem, -0.25rem + 2.6vw, 1.2rem);
 }
 
 h4 {
@@ -422,6 +418,13 @@ h1 {
   font-family: "Fjalla One", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+h1::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin-top: 5px;
+  max-width: 400px;
 }
 
 h2 {
@@ -465,16 +468,20 @@ Composant
   flex-shrink: 1;
   flex-basis: 340px;
   padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgb(192, 163, 152) 0px 3px 8px;
   border-radius: 5px;
 }
 .principal__article header {
   margin-top: 15px;
+  margin-bottom: 10px;
 }
 .principal__article a {
   font-size: clamp(1rem, 0.125rem + 1.2vw, 1.25rem);
   padding-top: 10px;
   text-transform: none;
+}
+.principal__article:hover {
+  box-shadow: rgb(193, 132, 109) 0px 5px 10px;
 }
 
 .principal__recherche > .principal__article {
@@ -482,15 +489,6 @@ Composant
   margin-bottom: 20px;
 }
 
-/*
-<nav class="menu-principal-container">
-<ul id="menu-principal" class="menu"><li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-56"><a href="http://localhost:81/31w-etudiant/582-4mb-animation-3d-75h/">Animation 3D</a></li>
-<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-57"><a href="http://localhost:81/31w-etudiant/582-4pa-interfaces-web-reactives-et-animees-cours-au-choix-75h/">Interfaces Web réactives et animées</a></li>
-<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-58"><a href="http://localhost:81/31w-etudiant/360-4j4-creation-de-jeu-en-equipe-105h/">Création de jeu en équipe</a></li>
-<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-59"><a href="http://localhost:81/31w-etudiant/582-4w4-conception-dinterfaces-et-developpement-web/">Conception d’interfaces</a></li>
-<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-60"><a href="http://localhost:81/31w-etudiant/582-4c2-gestion-de-projets-multimedias/" aria-current="page">Gestion de projets multimédias</a></li>
-</ul></nav>
-*/
 .menu-principal-container .menu {
   display: flex;
   gap: 5px;
@@ -505,10 +503,20 @@ Composant
 .menu-principal-container .menu .menu-item a {
   padding: 5px;
   font-size: 1rem;
+  position: relative;
 }
-.menu-principal-container .menu .menu-item a:hover {
-  text-decoration: underline;
-  transition: 1000ms;
+.menu-principal-container .menu .menu-item a::after {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: #000;
+  transition: 0.5s ease-out;
+}
+.menu-principal-container .menu .menu-item a:hover:after {
+  width: 100%;
 }
 @media screen and (max-width: 720px) {
   .menu-principal-container .menu .menu-item a {
@@ -516,12 +524,6 @@ Composant
   }
 }
 
-/*
-.menu-principal-container 
-.menu-principal-container .menu
-.menu-principal-container .menu .menu-item
-.menu-principal-container .menu .menu-item a
-*/
 .entete__global {
   display: flex;
   align-items: center;
@@ -535,7 +537,7 @@ Composant
 }
 
 .entete__titre h2 {
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .entete__nav {
@@ -550,48 +552,24 @@ Composant
   }
 }
 
-/*
-<form class="recherche" role="search" method="get" action="http://localhost:81/31w-etudiant/">
-  <label>
-    <input class="recherche__input" type="search" placeholder="Search..." value="" name="s">
-  </label>
-  <button class="recherche__bouton" type="submit">
-    <img src="https://s2.svgbox.net/hero-outline.svg?ic=search&amp;color=000" width="32" height="32">
-  </button>
-</form>
-
-
-*/
-/*
-.recherche {
-}
-
-.recherche__input {
-}
-
-.recherche__bouton {
-}
-
-.recherche__bouton img {
-}
-*/
 .recherche {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   position: relative;
+  max-width: 278px;
 }
 .recherche__input, .recherche__bouton {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(192, 163, 152, 0.1960784314);
   border: none;
   outline: none;
   font-size: 1.2rem;
   padding: 5px;
 }
 .recherche__input:hover, .recherche__bouton:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(192, 163, 152, 0.3450980392);
 }
 .recherche__input:focus, .recherche__bouton:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(193, 49, 49, 0.0980392157);
   outline: none;
 }
 .recherche__bouton {
@@ -603,25 +581,41 @@ Composant
   font-size: 1.1rem;
   font-weight: bold;
 }
+
 .pied__global {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-top: 40px;
+  padding-top: 20px;
+}
+.pied__global h1 {
+  margin: 0;
 }
 
 .pied__conteneur {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
   gap: 40px;
+  align-items: baseline;
+}
+@media screen and (max-width: 900px) {
+  .pied__conteneur {
+    grid-template-columns: 1fr;
+  }
+  .pied__conteneur p {
+    max-width: 65ch;
+  }
+  .pied__conteneur {
+    max-width: 50%;
+  }
 }
 
-.pied__conteneur:last-of-type {
-  justify-content: space-around;
+.pied__texte-image > img {
+  max-width: 60%;
 }
 
-.pied__conteneur img {
-  height: 250px;
+.pied__nav > nav > ul {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
 }/*# sourceMappingURL=style.css.map */

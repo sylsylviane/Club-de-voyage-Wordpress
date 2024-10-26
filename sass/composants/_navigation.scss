@@ -1,12 +1,3 @@
-/*
-<nav class="menu-principal-container">
-<ul id="menu-principal" class="menu"><li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-56"><a href="http://localhost:81/31w-etudiant/582-4mb-animation-3d-75h/">Animation 3D</a></li>
-<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-57"><a href="http://localhost:81/31w-etudiant/582-4pa-interfaces-web-reactives-et-animees-cours-au-choix-75h/">Interfaces Web réactives et animées</a></li>
-<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-58"><a href="http://localhost:81/31w-etudiant/360-4j4-creation-de-jeu-en-equipe-105h/">Création de jeu en équipe</a></li>
-<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-59"><a href="http://localhost:81/31w-etudiant/582-4w4-conception-dinterfaces-et-developpement-web/">Conception d’interfaces</a></li>
-<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-60"><a href="http://localhost:81/31w-etudiant/582-4c2-gestion-de-projets-multimedias/" aria-current="page">Gestion de projets multimédias</a></li>
-</ul></nav>
-*/
 .menu-principal-container {
   // nav
   .menu {
@@ -23,10 +14,11 @@
       a {
         padding: 5px;
         font-size: 1rem;
-        &:hover{
-          text-decoration: underline;
-          transition: 1000ms;
-        }
+        position: relative;
+
+        @include regle_soulignement("&::after");
+        @include regle_soulignement_hover("&:hover:after");
+
         @media screen and (max-width: 720px) {
             &{
               font-size: 0.9rem;
@@ -38,9 +30,3 @@
   }
 }
 
-/*
-.menu-principal-container 
-.menu-principal-container .menu
-.menu-principal-container .menu .menu-item
-.menu-principal-container .menu .menu-item a
-*/

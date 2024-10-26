@@ -2,18 +2,11 @@
 h1 {
   font-size: clamp(2rem, -0.75rem + 4.8vw, 4rem);
 }
-
-// @include regle_couleur_avant_arriere(
-//   ".entete__titre h1 a",
-//   $couleur3,
-//   $couleur2
-// );
-
 h2 {
   font-size: clamp(1.3rem, -0.3125rem + 3vw, 1.5rem);
 }
 h3 {
-  font-size: clamp(1.2rem, -0.25rem + 2.6vw, 2.1875rem);
+  font-size: clamp(1.2rem, -0.25rem + 2.6vw, 1.2rem);
 }
 h4 {
   font-size: clamp(1.1rem, -0.1875rem + 2.2vw, 1.875rem);
@@ -32,17 +25,23 @@ P {
 }
 
 h1 {
-  // font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-family: "Fjalla One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  
+   &::after{
+    content: "";
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    margin-top: 5px;
+    max-width: 400px;
+}
 }
 
 h2 {
-  // font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  // font-style: normal;
   margin: 0;
 }
 
@@ -52,7 +51,7 @@ h5,
 h6,
 p,
 a {
-  // font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
   font-family: "Overpass", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -63,8 +62,3 @@ h6{
   font-weight: 600;
 }
 
-// p {
-//   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-//     "Lucida Sans", Arial, sans-serif;
-
-// }
