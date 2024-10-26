@@ -1,0 +1,34 @@
+.recherche {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  position: relative;
+  max-width: 278px;
+  
+  &__input,
+  &__bouton {
+    background-color: #c0a39832;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 5px;
+    &:hover {
+      background-color: #c0a39858;
+    }
+    &:focus {
+      background-color: #c1313119;
+      outline: none;
+    }
+  }
+  &__bouton{
+    position: absolute;
+    right: 0;
+  }
+
+  &__input::placeholder {
+    color: #00000042;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  
+}

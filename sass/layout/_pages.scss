@@ -1,37 +1,40 @@
+:root {
+  --couleur1: #f0e8e6;
+  --couleur2: #e0d1cc;
+  --couleur3: #c0a398;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+
+    text-transform: uppercase;
+    cursor: pointer;
+}
+section > header{
+  margin-top: 40px;
+}
+section > header>*{
+  margin-bottom: 20px;
+}
+
+
 .global {
-  max-width: 1100px;
+  max-width: 1280px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
+  background-color: #c0a39832;
+  padding: 20px
+}
 
-  .global__entete {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-
-  & h1 {
-    margin-top: 0;
-  }
-}
-.recherche > div {
-  display: flex;
-  gap: 3px;
-}
-.recherche input {
-  max-width: 300px;
-  min-width: 150px;
-  max-height: 22px;
-}
-.entete {
-  background-color: #88c1f2;
-  padding: 2rem;
-}
-.principal {
-  background-color: #93a605;
-}
-.pied {
-  background-color: #d93425;
-  text-align: center;
-}
+@include regle_couleur_back(".entete", $couleur1);
+@include regle_couleur_back(".principal", $couleur2);
+@include regle_couleur_back(".pied", $couleur1);

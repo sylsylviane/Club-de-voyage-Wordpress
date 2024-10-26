@@ -21,3 +21,4 @@ function ajout_option()
 }
 
 add_action("after_setup_theme", "ajout_option");
+

@@ -1,0 +1,34 @@
+$couleur1: --couleur1;
+$couleur2: --couleur2;
+$couleur3: --couleur3;
+
+@mixin regle_couleur($selecteur, $couleur) {
+  #{$selecteur} {
+    color: var(#{$couleur});
+  }
+}
+
+@mixin regle_couleur_back($selecteur, $couleur) {
+  #{$selecteur} {
+    background-color: var(#{$couleur});
+  }
+}
+
+@mixin regle_soulignement($selecteur){
+  #{$selecteur}{
+    position: absolute;
+          left: 0;
+          bottom: -2px;
+          content: "";
+          height: 1px;
+          width: 0%;
+          background-color: #000;
+          transition: 0.5s ease-out;
+  }
+}
+@mixin regle_soulignement_hover($selecteur){
+  #{$selecteur}{
+  width: 100%;
+
+  }
+}

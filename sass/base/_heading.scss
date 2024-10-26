@@ -1,45 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 h1 {
-  font-size: clamp(1rem, -0.75rem + 4.8vw, 3.75rem);
+  font-size: clamp(2rem, -0.75rem + 4.8vw, 4rem);
 }
 h2 {
-  font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
+  font-size: clamp(1.3rem, -0.3125rem + 3vw, 1.5rem);
 }
 h3 {
-  font-size: clamp(0.5625rem, -0.25rem + 2.6vw, 2.1875rem);
+  font-size: clamp(1.2rem, -0.25rem + 2.6vw, 1.2rem);
 }
 h4 {
-  font-size: clamp(0.5rem, -0.1875rem + 2.2vw, 1.875rem);
+  font-size: clamp(1.1rem, -0.1875rem + 2.2vw, 1.875rem);
 }
 h5 {
-  font-size: clamp(0.5rem, -0.0313rem + 1.7vw, 1.5625rem);
+  font-size: clamp(1rem, -0.0313rem + 1.7vw, 1.5625rem);
+  margin: 0;  
 }
 h6 {
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.25rem);
+  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.25rem);
+  margin: 0;
 }
 
-p,
-a {
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
+P {
+  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
 }
 
 h1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  letter-spacing: 1.5px;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+   &::after{
+    content: "";
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    margin-top: 5px;
+    max-width: 400px;
+}
 }
 
 h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  margin: 0;
 }
 
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+h6,
+p,
+a {
+
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+h5,
+h6{
+  font-weight: 600;
 }
 
-p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  max-width: 45ch;
-}
