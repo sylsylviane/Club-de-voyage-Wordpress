@@ -18,7 +18,7 @@
           $chaine = get_the_title();
           $sigle = substr($chaine, 0, 7);
           $titre = substr($chaine, 8, strrpos($chaine, "(") - 8);
-          $duree = '60h';
+          $duree = substr($chaine, -4, -1);
           ?>
           <article class="principal__article"><a href="<?php the_permalink(); ?>">
               <header>
@@ -28,6 +28,8 @@
               <p><?php echo wp_trim_words(get_the_excerpt(), 20, null); ?></p>
               <code><?php echo $duree; ?></code>
             </a>
+
+
           </article>
         <?php endwhile; ?>
     </div>

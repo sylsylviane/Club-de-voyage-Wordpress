@@ -1,9 +1,19 @@
 :root {
-  --couleur1: #A1A4AD;
-  --couleur2: #d59537;
-  --couleur3: #6E7283;
-  --couleur4: #c73682;
-  --couleur5: #FCFAFA;
+  // --couleur1: #A1A4AD;
+  // --couleur2: #d59537;
+  // --couleur3: #6E7283;
+  // --couleur4: #c73682;
+  // --couleur5: #FCFAFA;
+
+  --couleur3: #e0d1cc;
+  --couleur1: #f0e8e6;
+  --couleur5: #c0a398;
+
+  //   --couleur3: #bec9d4;
+  // --couleur1: #dee4e9;
+  // --couleur5: #9eafbf;
+
+
 }
 
 html,
@@ -27,6 +37,9 @@ section > header{
 section > header>*{
   margin-bottom: 20px;
 }
+p{
+  max-width: 40ch;
+}
 
 .global {
   max-width: 1280px;
@@ -34,12 +47,6 @@ section > header>*{
   background-color: #f2f1f016;
   padding: 20px
 }
-/*
-.entete {
-  background-color: #00dfdf;
-  
-}
-*/
 
 @include regle_couleur_back(".entete", $couleur1);
 
@@ -48,5 +55,5 @@ section > header>*{
 }
 
 .pied {
-  background-color: var(--couleur1);
+  background-color: var(--couleur5);
 }

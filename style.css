@@ -22,6 +22,7 @@ Normalize
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -330,11 +331,9 @@ template {
 Layout
 *******************/
 :root {
-  --couleur1: #A1A4AD;
-  --couleur2: #d59537;
-  --couleur3: #6E7283;
-  --couleur4: #c73682;
-  --couleur5: #FCFAFA;
+  --couleur3: #e0d1cc;
+  --couleur1: #f0e8e6;
+  --couleur5: #c0a398;
 }
 
 html,
@@ -363,6 +362,10 @@ section > header > * {
   margin-bottom: 20px;
 }
 
+p {
+  max-width: 40ch;
+}
+
 .global {
   max-width: 1280px;
   margin: 0 auto;
@@ -370,12 +373,6 @@ section > header > * {
   padding: 20px;
 }
 
-/*
-.entete {
-  background-color: #00dfdf;
-
-}
-*/
 .entete {
   background-color: var(--couleur1);
 }
@@ -385,7 +382,7 @@ section > header > * {
 }
 
 .pied {
-  background-color: var(--couleur1);
+  background-color: var(--couleur5);
 }
 
 /********************
@@ -422,23 +419,32 @@ P {
 }
 
 h1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
   margin: 0;
 }
 
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+h6,
+p,
+a {
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+h5,
+h6 {
+  font-weight: 600;
 }
 
 /********************
@@ -454,7 +460,7 @@ Composant
 }
 
 .principal__article {
-  background-color: #A1A4AD;
+  background-color: #f0e8e6;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 340px;
@@ -593,7 +599,29 @@ Composant
   right: 0;
 }
 .recherche__input::placeholder {
-  color: #BDD1D9;
+  color: rgba(0, 0, 0, 0.2588235294);
   font-size: 1.1rem;
   font-weight: bold;
+}
+.pied__global {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+.pied__conteneur {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.pied__conteneur:last-of-type {
+  justify-content: space-around;
+}
+
+.pied__conteneur img {
+  height: 250px;
 }/*# sourceMappingURL=style.css.map */
