@@ -8,7 +8,7 @@
 
 <main class="principal">
   <section class="global">
-    <h2>Résultat - single.php</h2>
+    <h2>Résultat</h2>
     <div class="principal__conteneur">
       <?php if (have_posts()): ?>
         <!-- on aurait pas besoin d'utiliser une boucle while car un seul article sera toujours affiché -->
