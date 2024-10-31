@@ -30,6 +30,7 @@ section > header>*{
   margin-bottom: 20px;
 }
 main{
+  display: flex;
   flex-grow: 1;
 }
 
@@ -37,7 +38,9 @@ main{
   max-width: 1280px;
   margin: 0 auto;
   background-color: #c0a39832;
-  padding: 20px
+  padding: 20px;
+  flex-grow: 1;
+  
 }
 
 @include regle_couleur_back(".entete", $couleur1);

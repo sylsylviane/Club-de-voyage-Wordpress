@@ -25,13 +25,13 @@
           $titre = substr($chaine, 7, $position_parenthesese - 7);
           $duree = substr($chaine, $position_parenthesese);
           ?>
-          <article class="principal__article"><!--Ajouter permalink et un lien pour afficher les cours-->
+          <article class="principal__article"><a href="<?php the_permalink(); ?>"><!--Ajouter permalink et un lien pour afficher les cours-->
             <h5><?php echo $sigle ?></h5>
             <h5><?php echo $titre ?></h5>
             <!-- On trim le résume the_excerpt à 50 mots -->
             <p><?php echo wp_trim_words(get_the_excerpt(), 10, " (suite...)"); ?></p> <!-- the_content peut contenir des images, the_excert contient du texte -->
-            <h5>Durée: <?php echo $duree ?></h5>
-            <p>Enseignant: <?php the_field('commentaire'); ?></p> <!--créer une liste déroulante-->
+            <p>Durée: <?php echo $duree ?></p>
+            <p>Enseignant: <?php the_field('commentaire'); ?></p></a> <!--créer une liste déroulante-->
           </article>
         <?php endwhile; ?>
     </div>

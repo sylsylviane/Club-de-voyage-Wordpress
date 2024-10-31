@@ -366,6 +366,7 @@ section > header > * {
 }
 
 main {
+  display: flex;
   flex-grow: 1;
 }
 
@@ -374,6 +375,7 @@ main {
   margin: 0 auto;
   background-color: rgba(192, 163, 152, 0.1960784314);
   padding: 20px;
+  flex-grow: 1;
 }
 
 .entete {
@@ -562,8 +564,9 @@ Composant
 .recherche {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
+  display: flex;
+  max-width: fit-content;
   position: relative;
-  max-width: 278px;
 }
 .recherche__input, .recherche__bouton {
   background-color: rgba(192, 163, 152, 0.1960784314);
@@ -581,7 +584,7 @@ Composant
 }
 .recherche__bouton {
   position: absolute;
-  right: 0;
+  right: 0px;
 }
 .recherche__input::placeholder {
   color: rgba(0, 0, 0, 0.2588235294);
@@ -625,4 +628,45 @@ Composant
   display: flex;
   flex-direction: column;
   max-width: fit-content;
+}
+
+.principal__erreur404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-erreur404-container .menu {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+.menu-erreur404-container .menu .menu-item {
+  min-width: fit-content;
+  text-decoration: none;
+}
+.menu-erreur404-container .menu .menu-item a {
+  padding: 5px;
+  font-size: 1rem;
+  position: relative;
+}
+.menu-erreur404-container .menu .menu-item a::after {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: #000;
+  transition: 0.5s ease-out;
+}
+.menu-erreur404-container .menu .menu-item a:hover:after {
+  width: 100%;
+}
+@media screen and (max-width: 720px) {
+  .menu-erreur404-container .menu .menu-item a {
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=style.css.map */

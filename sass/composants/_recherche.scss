@@ -1,8 +1,9 @@
 .recherche {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
+  display: flex;
+  max-width: fit-content;
   position: relative;
-  max-width: 278px;
   
   &__input,
   &__bouton {
@@ -19,9 +20,10 @@
       outline: none;
     }
   }
+
   &__bouton{
     position: absolute;
-    right: 0;
+    right: 0px;
   }
 
   &__input::placeholder {
