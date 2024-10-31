@@ -9,7 +9,7 @@
 <main class="principal">
   <section class="global">
     <header>
-      <h2>Liste de cours front-page</h2>
+      <h2>Liste de cours</h2><code>front-page.php</code>
     </header>
     <div class="principal__conteneur">
       <?php if (have_posts()): ?>
