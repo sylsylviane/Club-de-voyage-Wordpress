@@ -22,3 +22,21 @@ function ajout_option()
 
 add_action("after_setup_theme", "ajout_option");
 
+/*=================================================================================================== */
+/**
+ * Modifie la requete principale de WordPress avant qu'elle soit exécuté
+ * le hook « pre_get_posts » se manifeste juste avant d'exécuter la requête principal
+ * Dépendant de la condition initiale on peut filtrer un type particulier de requête
+ * Dans ce cas ci nous filtrons la requête de la page d'accueil
+ * @param WP_query  $query la requête principal de WP
+ */
+/* query represente la requete principale, if la requete s'execute dans la page d'accueil, si la requete est une requete principale et si on n'est pas dans le tableau de bord*/
+function modifie_requete_principal( $query ) {
+if ( $query->is_home() && $query->is_main_query() && ! is_admin() ) {
+    //pour afficher les cours seulement, on inscrit cours, si on veut une autre catégorie, on l'inscrit ci dessous
+  $query->set( 'category_name', 'nouvelle' );
+  $query->set( 'orderby', 'title' );
+  $query->set( 'order', 'ASC' );
+  }
+ }
+ add_action( 'pre_get_posts', 'modifie_requete_principal' );

@@ -9,16 +9,17 @@
 <main class="principal">
   <section class="global">
     <header>
-      <h2>Liste de cours</h2>
+      <h2>Liste de cours front-page</h2>
     </header>
     <div class="principal__conteneur">
       <?php if (have_posts()): ?>
         <?php while (have_posts()) :  the_post(); ?>
           <?php
           $chaine = get_the_title();
-          $sigle = substr($chaine, 0, 7);
-          $titre = substr($chaine, 8, strrpos($chaine, "(") - 8);
-          $duree = substr($chaine, -6, strrpos($chaine, "("));
+            $sigle = substr($chaine,0,7);
+            $position_parenthesese = strpos($chaine, '(');
+            $titre = substr($chaine,7,$position_parenthesese-7);
+            $duree = substr($chaine,$position_parenthesese);
           ?>
           <article class="principal__article"><a href="<?php the_permalink(); ?>">
               <header>
