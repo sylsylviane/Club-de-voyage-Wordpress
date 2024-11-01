@@ -21,7 +21,7 @@
           <?php
           $chaine = get_the_title();
           $sigle = substr($chaine, 0, 7);
-          $position_parenthesese = strpos($chaine, '(');
+          $position_parenthesese = strrpos($chaine, '(');
           $titre = substr($chaine, 7, $position_parenthesese - 7);
           $duree = substr($chaine, $position_parenthesese);
           ?>
@@ -31,7 +31,7 @@
             <!-- On trim le résume the_excerpt à 50 mots -->
             <p><?php echo wp_trim_words(get_the_excerpt(), 10, " (suite...)"); ?></p> <!-- the_content peut contenir des images, the_excert contient du texte -->
             <p>Durée: <?php echo $duree ?></p>
-            <p>Enseignant: <?php the_field('commentaire'); ?></p></a> <!--créer une liste déroulante-->
+            <p>Enseignant: <?php the_field('enseignant'); ?></p></a> <!--créer une liste déroulante-->
           </article>
         <?php endwhile; ?>
     </div>
