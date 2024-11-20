@@ -18,6 +18,12 @@ function ajout_option()
 {
     // Activer le support des menus personnalisés dans le tableau de bord > apparence
     add_theme_support('menus');
+    add_theme_support('custom-logo', array(
+        'height'      => 250,
+        'width'       => 250,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ));
 }
 
 add_action("after_setup_theme", "ajout_option");
