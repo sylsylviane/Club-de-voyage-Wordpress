@@ -43,6 +43,11 @@ main{
   
 }
 
+.custom-logo {
+max-width: 150px;
+height: auto;
+}
+
 @include regle_couleur_back(".entete", $couleur1);
 @include regle_couleur_back(".principal", $couleur2);
 @include regle_couleur_back(".pied", $couleur1);

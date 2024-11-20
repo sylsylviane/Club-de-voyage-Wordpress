@@ -378,6 +378,11 @@ main {
   flex-grow: 1;
 }
 
+.custom-logo {
+  max-width: 150px;
+  height: auto;
+}
+
 .entete {
   background-color: var(--couleur1);
 }
