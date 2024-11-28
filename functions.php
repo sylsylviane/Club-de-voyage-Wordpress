@@ -86,6 +86,7 @@ add_action('wp_enqueue_scripts', 'ajouter_style'); //wp_enqueue_scripts est une 
 function ajout_option()
 {
     // Activer le support des menus personnalisés dans le tableau de bord > apparence
+    add_theme_support('post-thumbnails');
     add_theme_support('menus');
     add_theme_support('custom-logo', array(
         'height'      => 250,
@@ -97,6 +98,11 @@ function ajout_option()
 
 add_action("after_setup_theme", "ajout_option");
 
+// function montheme_supports(){
+//     add_theme_support('title-tag');
+// }
+
+// add_action('after_setup_theme', 'montheme_supports');
 /*=================================================================================================== */
 /**
  * Modifie la requete principale de WordPress avant qu'elle soit exécuté
@@ -110,7 +116,7 @@ function modifie_requete_principal($query)
 {
     if ($query->is_home() && $query->is_main_query() && ! is_admin()) {
         //pour afficher les cours seulement, on inscrit cours, si on veut une autre catégorie, on l'inscrit ci dessous
-        $query->set('category_name', 'nouvelle');
+        $query->set('category_name', 'favori');
         $query->set('orderby', 'title');
         $query->set('order', 'ASC');
     }
