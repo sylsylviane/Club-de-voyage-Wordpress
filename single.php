@@ -8,13 +8,15 @@
 
 <main class="principal">
   <section class="global">
-    <h2>Résultat</h2>
     <div class="principal__conteneur">
       <?php if (have_posts()): ?>
-        <!-- on aurait pas besoin d'utiliser une boucle while car un seul article sera toujours affiché -->
         <?php while (have_posts()) :  the_post(); ?>
           <article class="principal__article">
-            <h2><?php the_title() ?></h2>
+            <h1><?php the_title() ?></h1>
+            <?php the_post_thumbnail() ?>
+             <!-- <p>
+              <img src="<?php the_post_thumbnail_url() ?>" alt="" style='width:100%; height:auto;'>
+             </p> -->
             <?php the_content() ?>
           </article>
         <?php endwhile; ?>
