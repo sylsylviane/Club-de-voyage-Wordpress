@@ -31,34 +31,26 @@
   </section>
   <!-- ============================================================================ -->
 
-
   <section class="global nouveau">
     <header>
-      <h2>Nos favoris</h2>
+      <h2>Nos destinations favorites</h2>
     </header>
     <div class="principal__conteneur">
       <?php if (have_posts()): ?>
         <?php while (have_posts()) :  the_post(); ?>
-          <div class="carte">
+          <?php if (in_category('galerie')) : the_content() ?>
+          <?php elseif (in_category('favorite')) :  ?>
             <?php the_post_thumbnail('medium', ['class' => 'carte-img-top', 'alt' => '']) ?>
-            <img src="" alt="" class="carte-image-top">
             <div class="carte-body">
               <h5 class="carte-titre"><?php the_title() ?></h5>
-              <!-- <h6 class="carte-sous-titre"><?php the_category() ?></h6> -->
               <p class="carte-texte"><?php the_excerpt() ?></p>
               <a href="<?php the_permalink() ?>" class="carte-lien">Voir plus</a>
             </div>
-          </div>
-        <?php endwhile; ?>
-        <!-- ============================================================================ -->
-        
+          <?php endif ?>
 
+        <?php endwhile; ?>
     </div>
   <?php endif ?>
-  </section>
-
-  <section>
-    <?php echo do_shortcode('[carrousel]'); ?>
   </section>
   <!-- à faire pour tp2 -->
   <section id="inscription" class="global inscription">
@@ -66,25 +58,25 @@
       <label for="">Nom
         <input type="text" name="nom">
       </label>
-            <label for="">Prénom
+      <label for="">Prénom
         <input type="text" name="prenom">
       </label>
-            <label for="">Courriel
+      <label for="">Courriel
         <input type="email" name="courriel">
       </label>
-            <label for="">Numéro civique et rue
+      <label for="">Numéro civique et rue
         <input type="text" name="adresse">
       </label>
-            <label for="">Ville
+      <label for="">Ville
         <input type="text" name="ville">
       </label>
-            <label for="">Province
+      <label for="">Province
         <input type="text" name="province">
       </label>
-            <label for="">Pays
+      <label for="">Pays
         <input type="text" name="pays">
       </label>
-            <label for="">Téléphone
+      <label for="">Téléphone
         <input type="text" name="telephone">
       </label>
     </form>
