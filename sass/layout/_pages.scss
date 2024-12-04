@@ -1,16 +1,18 @@
 :root {
-  --couleur1: #f0e8e6;
-  --couleur2: #e0d1cc;
-  --couleur3: #c0a398;
+  // --couleur1: #f0e8e6;
+  // --couleur2: #e0d1cc;
+  // --couleur3: #c0a398;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
+  background-color: #00022D;
+  color: white;
+  // display: flex;
+  // flex-direction: column;
+  // min-height: 100dvh;
 }
 * {
   box-sizing: border-box;
@@ -25,21 +27,24 @@ a{
 }
 section > header{
   margin-top: 40px;
+  position: relative;
+
 }
 section > header>*{
   margin-bottom: 20px;
 }
 main{
-  display: flex;
-  flex-grow: 1;
+//   display: flex;
+//   flex-grow: 1;
+
 }
 
 .global {
-  max-width: 1280px;
-  margin: 0 auto;
-  background-color: #c0a39832;
-  padding: 20px;
-  flex-grow: 1;
+  // max-width: 1280px;
+  // margin: 0 auto;
+  // background-color: #c0a39832;
+  // padding: 20px;
+  // flex-grow: 1;
   
 }
 
@@ -48,6 +53,9 @@ max-width: 150px;
 height: auto;
 }
 
-@include regle_couleur_back(".entete", $couleur1);
-@include regle_couleur_back(".principal", $couleur2);
-@include regle_couleur_back(".pied", $couleur1);
+.global.nouveau{
+  margin: 40px;
+}
+// @include regle_couleur_back(".entete", $couleur1);
+// @include regle_couleur_back(".principal", $couleur2);
+// @include regle_couleur_back(".pied", $couleur1);

@@ -17,40 +17,40 @@
 // #     </ul>
 // # </nav>
 
-.principal__erreur404{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+// .principal__erreur404{
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
 
-}
-.menu-erreur404-container {
-  // nav
-  .menu {
-    // ul
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0;
-    .menu-item {
-      //li
-      min-width: fit-content;
-      text-decoration: none;
-      a {
-        padding: 5px;
-        font-size: 1rem;
-        position: relative;
+// }
+// .menu-erreur404-container {
+//   // nav
+//   .menu {
+//     // ul
+//     display: flex;
+//     justify-content: space-around;
+//     flex-wrap: wrap;
+//     list-style-type: none;
+//     padding: 0;
+//     .menu-item {
+//       //li
+//       min-width: fit-content;
+//       text-decoration: none;
+//       a {
+//         padding: 5px;
+//         font-size: 1rem;
+//         position: relative;
 
-        @include regle_soulignement("&::after");
-        @include regle_soulignement_hover("&:hover:after");
+//         @include regle_soulignement("&::after");
+//         @include regle_soulignement_hover("&:hover:after");
 
-        @media screen and (max-width: 720px) {
-            &{
-              font-size: 0.9rem;
-            }
-        }
+//         @media screen and (max-width: 720px) {
+//             &{
+//               font-size: 0.9rem;
+//             }
+//         }
         
-      }
-    }
-  }
-}
+//       }
+//     }
+//   }
+// }
