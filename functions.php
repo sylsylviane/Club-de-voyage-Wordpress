@@ -116,7 +116,7 @@ function modifie_requete_principal($query)
 {
     if ($query->is_home() && $query->is_main_query() && ! is_admin()) {
         //pour afficher les cours seulement, on inscrit cours, si on veut une autre catégorie, on l'inscrit ci dessous
-        $query->set('category_name', 'favori');
+        $query->set('category_name', 'favorite');
         $query->set('orderby', 'title');
         $query->set('order', 'ASC');
     }
