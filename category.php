@@ -6,6 +6,13 @@
 ?>
 <?php get_header() ?>
 
+<!-- Permet d'obtenir toutes les infos sur la catégorie active, y compris la description -->
+  <?php $category = get_queried_object();
+  if (isset($category->description)){
+    echo esc_html($category->description);
+  } ?>
+  <!-- ========================================================= -->
+   
 <main class="principal">
   <section class="global">
     <h2><?php single_cat_title() ?></h2>
