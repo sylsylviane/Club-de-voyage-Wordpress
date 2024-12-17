@@ -4,76 +4,90 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 20px;
+  position: relative;
+  gap: 20px;
+
+  @media screen and (max-width:960px) {
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 800px) {
+    justify-content: space-between;
+  }
+}
+
+.custom-logo {
+  width: 150px;
+  height: auto;
 }
 
 .entete__titre h1,
 .entete__titre h2 {
   margin: 0;
 }
-.entete__titre h2{
+.entete__titre h2 {
   padding-top: 20px;
 }
 
 .entete__nav {
   display: flex;
-  // flex-direction: column;
   align-items: baseline;
   gap: 10px;
-
-  @media screen and (max-width: 1200px) {
-    &{
-      align-items: flex-start;
-    }
-  }
 }
 
-.responsive-menu{
-    display: none;
+.nouveau {
+  margin: 0 40px 0 40px;
 }
 
-.menu-toggle{
+/***********************************/
+
+// MENU RESPONSIVE
+nav > ul > li {
+  overflow: hidden;
+}
+.menu-bouton-conteneur {
+  cursor: pointer;
+  display: none;
+}
+#menu-toggle {
   display: none;
 }
 
-@media screen and (max-width:950px) {
-    .menu-principal{
-        display: none;
-    }
 
-    .nav-princ  ul {
-    position: absolute;
-    top: 175px;
-    margin-top: 20px;
-    flex-direction: column;
-    width: 100%;
-    right: 0;
-    gap: 0;
-    z-index: 3;
+@media screen and (max-width: 800px) {
+  .menu-bouton-conteneur {
+    display: flex;
   }
-  .nav-princ li {
-    background-color: var(--couleur-blanc);
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 100px;
+    flex-flow: column;
+    width: 100%;
+    left: 0;
+        gap: 0;
+  }
+
+  .menu li {
+    background-color: var(--blanc);
     display: flex;
     justify-content: center;
+    padding: 1em;
+    z-index: 2;
 
-    &:hover {
-      background-color: #fff;
-    }
   }
 
-  .nav-princ li {
-    overflow: hidden;
-  }
-  .menu-toggle li {
-    height: 0;
-    padding: 0;
+  #menu-toggle ~ nav ul li {
+    height: 0; 
     margin: 0;
+    padding: 0;
     transition: height 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
   }
-  .menu-toggle:checked li {
+  #menu-toggle:checked ~ nav ul li {
     height: 2.5em;
     padding: 0.5em;
     transition: height 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-    border-bottom: 1px solid var(--couleur-bleu-pale);
   }
+}
 
-  }
