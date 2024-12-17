@@ -1,0 +1,71 @@
+.form-inscription {
+  background-color: var(--blanc);
+  padding: 20px;
+  position: relative;
+  top: -32px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  @media screen and (max-width: 880px) {
+    min-width: 80%;
+  }
+}
+
+.form-inscription > form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 15px;
+
+  @media screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 880px) {
+    flex-direction: column;
+  }
+}
+
+.form-inscription form div {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  flex-grow: 1;
+
+  @media screen and (max-width: 880px) {
+    width: 100%;
+  }
+}
+
+.form-inscription form label {
+  color: #222;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.form-inscription form input {
+  padding: 5px 20px;
+  background-color: transparent;
+  border: 1px solid #29d9d5;
+  outline: 0;
+  width: 100%;
+  font-size: 13px;
+  color: #000;
+}
+
+.form-inscription form input[type="submit"] {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #222;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 10px;
+}
+.form-inscription form input[type="submit"]:hover {
+  box-shadow: 0 0 10px #29d9d5;
+}
+.form-inscription input::placeholder {
+  color: #a9a9a9;
+  font-size: 14px;
+}
