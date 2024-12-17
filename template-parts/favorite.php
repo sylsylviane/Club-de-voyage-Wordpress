@@ -10,7 +10,7 @@
                 <h5><?php the_title() ?></h5>
               </header>
               <p><?php the_excerpt() ?></p>
-              <a href="<?php the_permalink() ?>">Voir plus</a>
+              <a href="<?php the_permalink() ?>" class="bouton">Voir plus</a>
             </a>
           </article>
           <?php endif ?>
