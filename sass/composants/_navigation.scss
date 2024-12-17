@@ -15,6 +15,7 @@
         padding: 5px;
         font-size: 1rem;
         position: relative;
+        // color: #fff;
 
         @include regle_soulignement("&::after");
         @include regle_soulignement_hover("&:hover:after");
@@ -27,6 +28,10 @@
         
       }
     }
+  }
+
+  .current-menu-item{
+    border: 1px solid #29d9d5;
   }
 
 
