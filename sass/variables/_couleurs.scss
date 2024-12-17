@@ -1,18 +1,21 @@
-$couleur1: --couleur1;
-$couleur2: --couleur2;
-$couleur3: --couleur3;
+$blanc: --blanc;
+$turquoise-pale: --turquoise-pale;
+$turquoise-fonce: --turquoise-fonce;
+$emeraude: --emeraude;
+$bleu: --bleu;
 
-@mixin regle_couleur($selecteur, $couleur) {
-  #{$selecteur} {
-    color: var(#{$couleur});
-  }
-}
 
-@mixin regle_couleur_back($selecteur, $couleur) {
-  #{$selecteur} {
-    background-color: var(#{$couleur});
-  }
-}
+// @mixin regle_couleur($selecteur, $couleur) {
+//   #{$selecteur} {
+//     color: var(#{$couleur});
+//   }
+// }
+
+// @mixin regle_couleur_back($selecteur, $couleur) {
+//   #{$selecteur} {
+//     background-color: var(#{$couleur});
+//   }
+// }
 
 @mixin regle_soulignement($selecteur){
   #{$selecteur}{
@@ -22,13 +25,13 @@ $couleur3: --couleur3;
           content: "";
           height: 1px;
           width: 0%;
-          background-color: #fff;
+          background-color: var(#{$turquoise-fonce});
           transition: 0.5s ease-out;
   }
 }
 @mixin regle_soulignement_hover($selecteur){
   #{$selecteur}{
-  width: 100%;
+    width: 100%;
 
   }
 }
