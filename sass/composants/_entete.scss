@@ -42,9 +42,7 @@
 /***********************************/
 
 // MENU RESPONSIVE
-nav > ul > li {
-  overflow: hidden;
-}
+
 .menu-bouton-conteneur {
   cursor: pointer;
   display: none;
@@ -55,6 +53,10 @@ nav > ul > li {
 
 
 @media screen and (max-width: 800px) {
+
+  nav > ul > li {
+  overflow: hidden;
+  }
   .menu-bouton-conteneur {
     display: flex;
   }
