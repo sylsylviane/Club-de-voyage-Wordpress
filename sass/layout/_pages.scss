@@ -1,61 +1,42 @@
 :root {
-  // --couleur1: #f0e8e6;
-  // --couleur2: #e0d1cc;
-  // --couleur3: #c0a398;
+  --blanc: #fff9f9;
+  --rose: #f2d5d5;
+  --turquoise-pale: #a7d9d9;
+  --turquoise-fonce: #04bfbf;
+  --emeraude: #0378a6;
+  --bleu: #6080bf;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #00022D;
-  color: white;
-  // display: flex;
-  // flex-direction: column;
-  // min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--blanc);
 }
 * {
   box-sizing: border-box;
 }
-a{
-    text-decoration: none;
-    color: inherit;
-    display: block;
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 
-    text-transform: uppercase;
-    cursor: pointer;
+  text-transform: uppercase;
+  cursor: pointer;
 }
-section > header{
+section > header {
   margin-top: 40px;
-  position: relative;
-
 }
-section > header>*{
+section > header > * {
   margin-bottom: 20px;
-}
-main{
-//   display: flex;
-//   flex-grow: 1;
-
 }
 
 .global {
-  // max-width: 1280px;
-  // margin: 0 auto;
-  // background-color: #c0a39832;
-  // padding: 20px;
-  // flex-grow: 1;
-  
+  margin: 0 auto;
+  padding: 20px;
+  flex-grow: 1;
 }
-
-.custom-logo {
-max-width: 150px;
-height: auto;
-}
-
-.global.nouveau{
-  margin: 40px;
-}
-// @include regle_couleur_back(".entete", $couleur1);
-// @include regle_couleur_back(".principal", $couleur2);
-// @include regle_couleur_back(".pied", $couleur1);
