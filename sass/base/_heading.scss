@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 h1 {
   font-size: clamp(2rem, -0.75rem + 4.8vw, 4rem);
 }
@@ -25,22 +26,11 @@ P {
 }
 
 h1 {
-  font-family: "Fjalla One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  
-   &::after{
-    content: "";
-    display: block;
-    border-bottom: 1px solid rgba(0,0,0,0.3);
-    margin-top: 5px;
-    max-width: 400px;
-}
 }
 
 h2 {
-
-  font-family: "Lato", sans-serif;
   font-weight: 700;
   margin: 0;
 }
@@ -51,8 +41,6 @@ h5,
 h6,
 p,
 a {
-
-  font-family: "Overpass", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
