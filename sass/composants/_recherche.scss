@@ -1,36 +1,25 @@
-// .recherche {
-//   border: 1px solid rgba(0, 0, 0, 0.5);
-//   border-radius: 5px;
-//   display: flex;
-//   max-width: fit-content;
-//   position: relative;
-  
-//   &__input,
-//   &__bouton {
-//     background-color: #c0a39832;
-//     border: none;
-//     outline: none;
-//     font-size: 1.2rem;
-//     padding: 5px;
-//     &:hover {
-//       background-color: #c0a39858;
-//     }
-//     &:focus {
-//       background-color: #c1313119;
-//       outline: none;
-//     }
-//   }
+.recherche {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  max-width: fit-content;
 
-//   &__bouton{
-//     position: absolute;
-//     right: 0px;
-//   }
+  &__input,
+  &__bouton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 5px;
+    
+    &:hover {
+      background-color: #fff;
+    }
+    &:focus {
+      box-shadow: 0 0 10px #29d9d5;
+    }
+  }
+}
 
-//   &__input::placeholder {
-//     color: #00000042;
-//     font-size: 1.1rem;
-//     font-weight: bold;
-//   }
-
-  
-// }
+@media screen and (max-width: 1200px) {
+  .recherche {
+    display: none;
+  }
+}
