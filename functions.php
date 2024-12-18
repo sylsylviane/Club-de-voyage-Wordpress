@@ -172,6 +172,9 @@ function ajout_option()
         'flex-height' => true,
         'flex-width'  => true,
     ));
+
+    register_nav_menus(array('principal_menu' => __('Principal Menu', 'theme_31w'), 'liens_menu' => __('Liens Menu', 'theme_31w')));
+
 }
 
 add_action("after_setup_theme", "ajout_option");
