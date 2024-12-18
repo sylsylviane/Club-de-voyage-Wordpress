@@ -42,13 +42,11 @@
                 <?php wp_nav_menu(
                     array(
                         "menu" => "principal",
-                        "container" => "nav"
+                        "container" => "nav",
                     )
                 );
                 get_search_form();
                 ?>
-
             </div>
-
         </section>
     </header>
