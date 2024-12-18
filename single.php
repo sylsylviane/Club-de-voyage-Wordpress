@@ -16,7 +16,7 @@
             <figure class="article__figure">
             <?php if (has_post_thumbnail()) {
                   the_post_thumbnail('large', ['class' => 'bigImg', 'alt' => 'Image de voyage' ]); } ?>
-                  <figcaption>figcaption</figcaption>
+                  <!-- <figcaption>figcaption</figcaption> -->
               </figure>
             <?php the_content() ?>
           </article>
