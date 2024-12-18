@@ -12,11 +12,12 @@
       <?php if (have_posts()): ?>
         <?php while (have_posts()) :  the_post(); ?>
           <article class="principal__article">
-            <h1><?php the_title() ?></h1>
-            <?php the_post_thumbnail() ?>
-             <!-- <p>
-              <img src="<?php the_post_thumbnail_url() ?>" alt="" style='width:100%; height:auto;'>
-             </p> -->
+            <h1><?php  the_title() ?></h1>
+            <figure class="article__figure">
+            <?php if (has_post_thumbnail()) {
+                  the_post_thumbnail('large', ['class' => 'bigImg', 'alt' => 'Image de voyage' ]); } ?>
+                  <figcaption>figcaption</figcaption>
+              </figure>
             <?php the_content() ?>
           </article>
         <?php endwhile; ?>
