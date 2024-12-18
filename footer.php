@@ -1,31 +1,38 @@
         <footer class="pied">
             <section class="global pied__global">
-                <header>
-                    <h1><a href="<?php bloginfo('url') ?>"><?php bloginfo('name') ?></a></h1>
-                </header>
+
+                <?php
+                if (function_exists('the_custom_logo')) {
+                    the_custom_logo();
+                } else {
+                    echo '<a href="' . esc_url(home_url('/')) . '">' . get_bloginfo('name') . '</a>';
+                }
+                ?>
 
                 <div class="pied__conteneur">
                     <div>
-                        <h2>Introduction à un gestionnaire de contenu</h2>
-                        <h3>Création d'une page d'accueil</h3>
-                        <p>Travail réalisé par Sylviane Paré</p>
+                        <?php get_template_part('template-parts/pied-de-page-auteur'); ?>
+                        <?php get_template_part('template-parts/pied-de-page-infos'); ?>
+                        <?php get_template_part('template-parts/pied-de-page-icones'); ?>
                         <a href="https://github.com/sylsylviane/31w"><i class="ri-github-fill"></i> Lien github</a>
+                        <?php get_search_form(); ?>
                     </div>
-                    <div class="pied__texte-image">
-                        <p>Cet exercice nous permettra de continuer à améliorer notre thème en ajoutant les modèles front-page.php, ainsi que search.php. Plusieurs nouvelles règles de style seront ajoutées en utilisant les variables CSS/Sass et les Mixin</p>
-                        <!-- <img src="http://localhost/31w/wp-content/uploads/2024/10/college-maisonneuve.jpg" alt="Collège Maisonneuve"> -->
-                        <img src="https://gftnth00.mywhc.ca/31w09/wp-content/uploads/2024/10/college-maisonneuve.jpg" alt="Collège Maisonneuve">
-                        <!-- <img src="/wp-content/uploads/2024/10/college-maisonneuve.jpg" alt=""> -->
-                    </div>
+
+
                     <div class="pied__nav">
-                        <?php wp_nav_menu(
-                            array(
-                                "menu" => "principal",
-                                "container" => "nav"
-                            )
-                        );
-                        get_search_form();
+
+                        <?php
+                        
+                        wp_nav_menu(array(
+                            'menu' => 'liens',
+                            'theme_location' => 'liens_menu',
+                            'menu_id'        => 'liens-menu',
+                            'menu_class'     => 'liens-menu-class',
+                        ));
                         ?>
+
+
+
                     </div>
                 </div>
             </section>
