@@ -3,3 +3,6 @@
 
 ### Objectifs :
 - L’entête de la page contiendra un titre, une courte introduction, une galerie d’images de différentes destinations, un carrousel qui s’activera en cliquant sur une image de la galerie. Le nombre de personnes qui voyage ensemble, la date du départ et la date de retour.
+
+- Auteur Sylviane Paré
+- Lien whc: https://gftnth00.mywhc.ca/31w09/
