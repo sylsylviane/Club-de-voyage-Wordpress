@@ -21,10 +21,20 @@
               <figcaption><?php the_title() ?></figcaption>
             </figure>
             <?php the_content() ?>
+            <p>Date de départ: <?php the_field('date_de_depart'); ?></p></a> <!--créer une liste déroulante-->
+
           </article>
         <?php endwhile; ?>
     </div>
   <?php endif ?>
   </section>
+
+  <section>
+    <header>
+      <h2>S'inscrire</h2>
+    </header>
+    <?php get_template_part('template-parts/inscription'); ?>
+  </section>
+
 </main>
 <?php get_footer() ?>
