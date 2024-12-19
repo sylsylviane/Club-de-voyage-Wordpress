@@ -9,14 +9,19 @@
 <main class="principal">
     <section class="global">
         <div class="principal__conteneur principal__erreur404">
-            <h2 class="page-title"><?php esc_html_e('Oops! Cette page ne peut pas être trouvée'); ?></h2>
-            <div class="page-content">
+            <header>
+                <h2 class="page-title"><?php esc_html_e('Oops! Cette page ne peut pas être trouvée'); ?></h2>
+            </header>
+            <div class="principal__erreur404_page-content">
+
                 <p><?php esc_html_e('Il semble que rien n’ait été trouvé à cet endroit. Peut-être essayer une recherche parmi les catégories ci-dessous ?'); ?></p>
-                <?php
-                wp_nav_menu(array(
-                    "menu" => "erreur404",
-                    "container" => "nav"
-                ));
+                <?php wp_nav_menu(
+                    array(
+                        "menu" => "principal",
+                        "container" => "nav",
+                    )
+                );
+
                 ?>
             </div>
     </section>
