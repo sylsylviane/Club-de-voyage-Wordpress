@@ -442,13 +442,19 @@ Composant
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-  gap: 20px;
   margin-top: 20px;
+  gap: 20px;
+}
+@media screen and (max-width: 500px) {
+  .principal__conteneur {
+    justify-content: center;
+  }
 }
 
-.principal__article {
+.principal__article, .principal__erreur404 {
   display: flex;
   flex-direction: column;
+  gap: 5px;
   border: 1px solid var(--turquoise-pale);
   flex-grow: 1;
   flex-shrink: 1;
@@ -456,43 +462,62 @@ Composant
   padding: 20px;
   border-radius: 5px;
 }
-.principal__article header {
+.principal__article header, .principal__erreur404 header {
   margin-top: 15px;
   margin-bottom: 10px;
 }
-.principal__article a {
+.principal__article a, .principal__erreur404 a {
   font-size: clamp(1rem, 0.125rem + 1.2vw, 1.25rem);
   text-transform: none;
 }
-.principal__article a.bouton {
+.principal__article a.bouton, .principal__erreur404 a.bouton {
   margin-top: auto;
 }
-.principal__article img {
+.principal__article img, .principal__erreur404 img {
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
-  height: 300px;
 }
-.principal__article header {
+.principal__article header, .principal__erreur404 header {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.principal__article p {
+.principal__article p, .principal__erreur404 p {
   min-width: 30ch;
   max-width: 90ch;
   text-transform: none;
 }
 @media screen and (max-width: 1330px) {
-  .principal__article p {
+  .principal__article p, .principal__erreur404 p {
     max-width: 50ch;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .principal__conteneur {
-    justify-content: center;
-  }
+.principal__recherche {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
+
+.principal__erreur404 {
+  min-height: 50dvh;
+}
+
+.principal__erreur404_page-content p {
+  max-width: 50ch;
+}
+
+.principal__erreur404_page-content ul {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+}
+
+.principal__description {
+  margin: 20px;
+}
+
 .menu {
   display: flex;
   gap: 5px;
@@ -529,7 +554,7 @@ Composant
 }
 
 .current-menu-item {
-  border: 1px solid #29d9d5;
+  border-bottom: 1px solid #29d9d5;
 }
 
 .entete__global {
@@ -574,6 +599,11 @@ Composant
 
 .nouveau {
   margin: 0 40px 0 40px;
+}
+@media screen and (max-width: 600px) {
+  .nouveau {
+    margin: 0 auto;
+  }
 }
 
 /***********************************/
@@ -643,6 +673,57 @@ Composant
     display: none;
   }
 }
+.pied__global {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+.pied__global h1 {
+  margin: 0;
+}
+
+.pied__conteneur {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.pied__conteneur h5 {
+  font-weight: 500;
+  font-size: 22px;
+}
+@media screen and (max-width: 1020px) {
+  .pied__conteneur {
+    flex-direction: column;
+  }
+}
+
+.pied__auteur {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 600px) {
+  .pied__auteur {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.pied__nav a {
+  list-style-type: none;
+}
+
+.pied__nav ul {
+  padding: 0;
+}
+
+.pied__nav li {
+  list-style-type: none;
+}
+
 @media screen and (max-width: 1200px) {
   .pied__global form {
     display: block;
@@ -766,6 +847,10 @@ Composant
 .form-inscription input::placeholder {
   color: #a9a9a9;
   font-size: 14px;
+}
+
+.form-inscription__section h2 {
+  display: none;
 }
 
 .bouton {

@@ -8,6 +8,7 @@
 
 <main class="principal">
   <section class="global">
+    <h2>categorie cour</h2>
     <h2><?php
         $category = get_queried_object(); // Obtenir la catégorie actuelle
         if (isset($category->name)) {
